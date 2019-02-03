@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Counter</title>
+<style>
+td{border:2px solid black;border-collapse: collapse;text-align: center;width;200px; }
+
+
+</style>
+
+</head>
+<body>
+<a href="{% url 'macroword'%}">Back To Home page</a>    
+<h4>{{fulltext}}</h4>
+<h4> Total Words in Your Sentance - : {{words_count}} </h4>
+
+<br><br>
+<table>
+<tr>
+    <td>Words</td>
+    <td>Number of Times</td>
+</tr>
+{% for word,value in worddictionary %}
+
+
+
+<tr>
+    <td>{{word}}</td>
+    <td>{{value}}</td>
+</tr>
+
+{% endfor %}
+</table>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
